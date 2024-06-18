@@ -1,9 +1,7 @@
-package com.cheney.utils.concurrenttest;
+package com.cheney.concurrenttest;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-
-import static com.cheney.utils.concurrenttest.CompletableFutureDemo.sleep;
 
 /**
  * @author cheney
@@ -23,13 +21,13 @@ public class CompletableFutureStageDemo {
         CompletableFuture<String> f1 =
                 CompletableFuture.supplyAsync(()->{
                     int t = 5;
-                    sleep(t, TimeUnit.SECONDS);
+                    CompletableFutureDemo.sleep(t, TimeUnit.SECONDS);
                     return String.valueOf(t);
                 });
         CompletableFuture<String> f2 =
                 CompletableFuture.supplyAsync(()->{
                     int t = 10;
-                    sleep(t, TimeUnit.SECONDS);
+                    CompletableFutureDemo.sleep(t, TimeUnit.SECONDS);
                     return String.valueOf(t);
                 });
         CompletableFuture<String> f3 =

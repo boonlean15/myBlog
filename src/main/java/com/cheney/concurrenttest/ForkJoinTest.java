@@ -1,4 +1,4 @@
-package com.cheney.utils.concurrenttest;
+package com.cheney.concurrenttest;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
