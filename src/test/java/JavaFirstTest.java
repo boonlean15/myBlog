@@ -53,6 +53,7 @@ public class JavaFirstTest {
         Object o = aClass.getConstructor(long.class).newInstance(1L);
         String s = o.toString();
         log.info("s ---- " + s);
+        log.info("o ---- " + o);
 
     }
 
@@ -555,6 +556,7 @@ public class JavaFirstTest {
         List<String> list1 = list.subList(2, 3);
         list1.clear();
         log.info("list --- " +list);
+        log.info("list1 --- " + list1);
     }
 
     @Test
@@ -805,7 +807,7 @@ public class JavaFirstTest {
     }
 
     @Test
-    public void testLongAdder(){
+    public synchronized void testLongAdder(){
         final AtomicLong atomicLong = new AtomicLong(20);
         long l = atomicLong.updateAndGet(x -> {
             log.info("x ---- " + x);

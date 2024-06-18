@@ -48,6 +48,7 @@ public class JavaSecondTest {
         Optional<Double> first = optional.findFirst();
         Optional<Double> aDouble = first.map(v -> v * 2);
         Double aDouble1 = aDouble.get();
+
         log.info("aD ----- " + aDouble1);
     }
 
