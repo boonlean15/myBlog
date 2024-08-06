@@ -12,7 +12,7 @@ import java.util.concurrent.RecursiveTask;
  * 日期 2024/6/11
  */
 public class MapReduceDemo {
-    static void main(String[] args){
+    public static void main(String[] args){
         String[] fc = {"hello world",
                 "hello me",
                 "hello fork",
