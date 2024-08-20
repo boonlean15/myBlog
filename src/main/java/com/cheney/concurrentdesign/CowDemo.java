@@ -11,8 +11,7 @@ public class CowDemo {
 
     //Key:接口名
     //Value:路由集合
-    ConcurrentHashMap<String, CopyOnWriteArraySet<Router>>
-            rt = new ConcurrentHashMap<>();
+    ConcurrentHashMap<String, CopyOnWriteArraySet<Router>> rt = new ConcurrentHashMap<>();
 
     /**
      * 根据接口名获取路由表
@@ -37,9 +36,7 @@ public class CowDemo {
      * @param router
      */
     public void add(Router router) {
-        Set<Router> set = rt.computeIfAbsent(
-                router.iface, r ->
-                        new CopyOnWriteArraySet<>());
+        Set<Router> set = rt.computeIfAbsent(router.iface, r -> new CopyOnWriteArraySet<>());
         set.add(router);
     }
 

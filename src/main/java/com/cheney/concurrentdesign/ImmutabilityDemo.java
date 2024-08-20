@@ -18,8 +18,7 @@ public class ImmutabilityDemo {
     }
 
     public static final class Account{
-        private final
-        String user;
+        private final String user;
         public Account(String user){
             this.user = user;
         }
