@@ -38,7 +38,8 @@ public class StampedLockDemo {
                 long ws = sl.tryConvertToWriteLock(stamp);
                 if (ws != 0L) {
                     x = newX;
-                    y = newY;//正确的应该这里加上ws = stamp; ws不等于0L就是升级了写锁，那么最后要unlock的就是ws
+                    stamp = ws;
+                    y = newY;//正确的应该这里加上stamp = ws; ws不等于0L就是升级了写锁，那么最后要unlock的就是ws
                     break;
                 } else {
                     sl.unlockRead(stamp);

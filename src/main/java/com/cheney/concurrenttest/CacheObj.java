@@ -42,7 +42,7 @@ public class CacheObj<K, V> {
     }
     // 按需加载
     V getPlus(K key) {
-        V v = null;
+        V v;
         //读缓存
         r.lock();         //①
         try {
