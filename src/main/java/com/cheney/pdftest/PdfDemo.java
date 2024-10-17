@@ -9,16 +9,13 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.text.PDFTextStripperByArea;
 import org.apache.pdfbox.text.TextPosition;
-import org.springframework.boot.test.autoconfigure.data.cassandra.DataCassandraTest;
 
 
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Desc: 验证pdfbox的可行性

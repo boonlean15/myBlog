@@ -1,8 +1,5 @@
 package com.cheney.nio;
 
-import sun.net.www.http.HttpClient;
-import sun.net.www.protocol.http.HttpURLConnection;
-import sun.nio.ch.DefaultSelectorProvider;
 
 import java.io.IOException;
 import java.net.*;
